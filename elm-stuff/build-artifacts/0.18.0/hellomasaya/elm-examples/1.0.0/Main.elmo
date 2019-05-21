@@ -1,0 +1,194 @@
+var _hellomasaya$elm_examples$Main$stackViewHelp = F2(
+	function (i, l) {
+		return A2(
+			_elm_lang$html$Html$div,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$span,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(
+							_elm_lang$core$Basics$toString(i)),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(l),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _hellomasaya$elm_examples$Main$stackView = function (data) {
+	var newlist = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(data),
+		10) < 0) ? A2(
+		_elm_lang$core$List$append,
+		data,
+		_elm_lang$core$Array$toList(
+			A2(
+				_elm_lang$core$Array$initialize,
+				10 - _elm_lang$core$List$length(data),
+				_elm_lang$core$Basics$always('')))) : data;
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				_elm_lang$core$List$reverse(
+					A2(_elm_lang$core$List$indexedMap, _hellomasaya$elm_examples$Main$stackViewHelp, newlist))),
+			_1: {ctor: '[]'}
+		});
+};
+var _hellomasaya$elm_examples$Main$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'Pop':
+				var returnStack = _mhoare$elm_stack$Stack$pop(model.stack);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							stack: _elm_lang$core$Tuple$second(returnStack),
+							poppedNumber: _elm_lang$core$Tuple$first(returnStack),
+							temp: ''
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'Push':
+				var returnStack = A2(_mhoare$elm_stack$Stack$push, model.temp, model.stack);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{stack: returnStack, temp: ''}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{temp: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+		}
+	});
+var _hellomasaya$elm_examples$Main$init = {
+	ctor: '_Tuple2',
+	_0: {temp: '', stack: _mhoare$elm_stack$Stack$initialise, poppedNumber: _elm_lang$core$Maybe$Nothing},
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _hellomasaya$elm_examples$Main$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$none;
+};
+var _hellomasaya$elm_examples$Main$Model = F3(
+	function (a, b, c) {
+		return {temp: a, poppedNumber: b, stack: c};
+	});
+var _hellomasaya$elm_examples$Main$Temp = function (a) {
+	return {ctor: 'Temp', _0: a};
+};
+var _hellomasaya$elm_examples$Main$Pop = {ctor: 'Pop'};
+var _hellomasaya$elm_examples$Main$Push = {ctor: 'Push'};
+var _hellomasaya$elm_examples$Main$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _hellomasaya$elm_examples$Main$stackView(
+						_mhoare$elm_stack$Stack$toList(model.stack)),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$input,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$type_('text'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$value(model.temp),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onInput(
+									function (str) {
+										return _hellomasaya$elm_examples$Main$Temp(str);
+									}),
+								_1: {ctor: '[]'}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$button,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onClick(_hellomasaya$elm_examples$Main$Push),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Push'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$button,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(_hellomasaya$elm_examples$Main$Pop),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Pop'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$p,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(
+										A2(
+											_elm_lang$core$Basics_ops['++'],
+											'Popped: ',
+											A2(_elm_lang$core$Maybe$withDefault, '', model.poppedNumber))),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		});
+};
+var _hellomasaya$elm_examples$Main$main = _elm_lang$html$Html$program(
+	{init: _hellomasaya$elm_examples$Main$init, view: _hellomasaya$elm_examples$Main$view, update: _hellomasaya$elm_examples$Main$update, subscriptions: _hellomasaya$elm_examples$Main$subscriptions})();
