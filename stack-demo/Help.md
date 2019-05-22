@@ -5,6 +5,7 @@
 * **Solution:** Elm 0.18 uses Html.program but Elm 0.19 doesn't. Either downgrade *[1]* to 0.18 or use Browser.sandbox like this:  
 Add import statement:
      `import Browser exposing (..)`
+     
 And now use use sandbox: Note that we are not using Never - as in old code samples, but are using () instead:
 
     main : Program () Model Msg
