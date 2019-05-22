@@ -27,7 +27,5 @@ And now use use sandbox: Note that we are not using Never - as in old code sampl
     - Remove the `elm` binary from `/usr/local/bin`
     - Download Elm 0.18 installer from [here](https://web.archive.org/web/20180714175914id_/https://guide.elm-lang.org/install.html) and follow [this](https://web.archive.org/web/20180714175914id_/https://guide.elm-lang.org/) documentation.
 
-### elm-package.json  
-* **Points to note:** 
-    - If your code is in a src folder, change source directories from "." to "src".
-    - 
+### elm-package.json in 0.18 and elm.json in 0.19
+- If your code is in a src folder, change source directories from "." to "src". 
