@@ -1,0 +1,15 @@
+* Elm Stack Demo
+
+Stack is a linear data structure which follows LIFO (Last In First Out) order to perform operations.
+
+Here is a basic stack demo in elm functional language with the following Stack functions:
+
+Push: Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
+Pop: Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition.
+
+
+
+** Requirements:
+   - Elm Version 0.18
+
+** 

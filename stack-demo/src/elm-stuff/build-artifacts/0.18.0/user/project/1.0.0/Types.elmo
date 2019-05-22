@@ -1,0 +1,5 @@
+var _user$project$Types$Push = {ctor: 'Push'};
+var _user$project$Types$Temp = function (a) {
+	return {ctor: 'Temp', _0: a};
+};
+var _user$project$Types$Pop = {ctor: 'Pop'};
