@@ -5,7 +5,7 @@
 ## Requirements:
 
 1. Elm 0.18
-   Download Elm 0.18 installer from [here](https://web.archive.org/web/20180714175914id_/https://guide.elm-lang.org/install.html) and follow [this](https://web.archive.org/web/20180714175914id_/https://guide.elm-lang.org/) documentation.
+   Download Elm 0.18 installer from [here](https://github.com/hellomasaya/elm-programming/blob/master/Elm-Platform-0.18.pkg) and follow [this](https://web.archive.org/web/20180714175914id_/https://guide.elm-lang.org/) documentation.
    
 ## Run:
 
