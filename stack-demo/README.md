@@ -5,7 +5,8 @@
 ## Requirements:
 
 1. Elm 0.18
-- Download Elm 0.18 installer from [here](https://github.com/hellomasaya/elm-programming/blob/master/Elm-Platform-0.18.pkg)
+- Mac: Download Elm 0.18 installer from [here](https://github.com/hellomasaya/elm-programming/blob/master/Elm-Platform-0.18.pkg)
+- Linux: Use `sudo npm i -g elm@0.18` on terminal
    
 ## Run:
 
