@@ -12,6 +12,8 @@
 1. Clone this repository and run command:
 
         elm make src/app.elm --output app.js
+   
+   in `stack-demo/` folder.
         
 2. Open `index.html` from the `src/` forder.
 
