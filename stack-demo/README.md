@@ -2,9 +2,18 @@
 
 - Use `push` and `pop` buttons to do operations.
 
+**Requirements: **
+
+1. Elm 0.18
+   Download Elm 0.18 installer from [here](https://web.archive.org/web/20180714175914id_/https://guide.elm-lang.org/install.html) and follow [this](https://web.archive.org/web/20180714175914id_/https://guide.elm-lang.org/) documentation.
+   
 **Run:**
 
+1. Clone this repository and run command:
+
         elm make src/app.elm --output app.js
+        
+2. Open `index.html` from the `src/` forder.
 
 ## File descriptions:
 - App.elm: main module with `model, view and update` functions
