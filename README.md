@@ -1,3 +1,3 @@
 # elm-programming
 
-    elm make main.elm --output stack.html
+Projects built in elm
