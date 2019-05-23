@@ -9,12 +9,10 @@
    
 ## Run:
 
-1. Clone this repository and run command:
+1. Clone this repository and run the following command in `stack-demo/` folder:
 
         elm make src/app.elm --output app.js
    
-   in `stack-demo/` folder.
-        
 2. Open `index.html` from the `src/` forder.
 
 ## File descriptions:
