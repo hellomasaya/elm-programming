@@ -6,7 +6,7 @@
 
 1. Elm 0.18
 - Mac: Download Elm 0.18 installer from [here](https://github.com/hellomasaya/elm-programming/blob/master/Elm-Platform-0.18.pkg)
-- Linux: Use `sudo npm i -g elm@0.18` on terminal or from [here](https://github.com/elm-lang/elm-platform/releases)   
+- Linux: Use `sudo npm i -g elm@0.18` on terminal or download installer from [here](https://github.com/elm-lang/elm-platform/releases)   
 ## Run:
 
 1. Clone this repository and run the following command in `stack-demo/` folder:
